@@ -38,7 +38,10 @@ button {
   grid-template-columns: repeat(4, 100px);
   gap: 10px;
 }
-.row2,.row3,.row4,.row5 {
+.row2,
+.row3,
+.row4,
+.row5 {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   gap: 10px;
