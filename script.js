@@ -72,7 +72,6 @@ const stringfy = (numtype) => {
   }else{
     userInputDisplay.textContent = numtype;
   }
-  console.warn(numArr1,symbol,numArr2);
 };
 
 // Compute the calculation
