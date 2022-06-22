@@ -1,82 +1,83 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(to top left , #ff512f , #f09819);
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    font-family: "Orbitron" , sans-serif ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+  background-image: linear-gradient(to top left, #ff512f, #f09819);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.calculator-window{
-    border:2px solid black;
-    border-radius: 4px ;
-    padding:10px ;
-    /* background-color: white; */
-    max-width: fit-content;
+.calculator-window {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  /* background-color: white; */
+  max-width: 450px;
+  min-width: 450px;
 }
-button{
-    font-family: "Orbitron";
-    width:100px;
-    height:50px;
-    border-radius: 4px;
-    border:none;
-    cursor: pointer;
-    font-size: 16px;
+button {
+  font-family: "Orbitron";
+  width: 100px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
-.row1{
-    display: grid;
-    grid-template-columns: repeat(4,100px);
-    gap:10px;
+.row1 {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
 }
-.row2,.row3,.row4,.row5{
-    display: grid;
-    grid-template-columns: repeat(3,100px);
-    gap:10px;
+.row2,.row3,.row4,.row5 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
 }
-.buttons{
-    position: relative;
+.buttons {
+  position: relative;
 }
-section{
-    margin: 10px 0;
-}
-
-
-#user-input{
-    /* border: 2px solid red; */
-    background-color: black;
-    border-radius: 4px;
-    color:white;
-    text-align:end ;
-    padding: 10px 20px;
-    max-width:450px ;
-    overflow-x: auto;
-}
-.operator{
-    background-color: grey;
+section {
+  margin: 10px 0;
 }
 
-.equal{
-    position:absolute;
-    top:60px;
-    right:0px;
-    width:100px;
-    height:230px;
-    background-color: #55a630;
+#user-input {
+  /* border: 2px solid red; */
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  text-align: end;
+  padding: 10px 20px;
+  max-width: 450px;
+  overflow-x: auto;
 }
-.clear{
-    background-color: #d00000;
+.operator {
+  background-color: grey;
 }
-.equal,.clear{
-    color:white
+
+.equal {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  width: 100px;
+  height: 230px;
+  background-color: #55a630;
+}
+.clear {
+  background-color: #d00000;
+}
+.equal,
+.clear {
+  color: white;
 }
 
 /* @media screen and (max-width:600px){
