@@ -35,14 +35,13 @@ clearEl.addEventListener("click", () => {
 // Decimal button
 decimal.addEventListener("click", () => {
   if (currentNum === "1" && !numArr1.includes(".")) {
-      numArr1 += ".";
-      stringfy(numArr1);
-    }else if (currentNum === "2" && !numArr2.includes(".")) {
-      numArr2 += ".";
-      stringfy(numArr2);
-    }
+    numArr1 += ".";
+    stringfy(numArr1);
+  } else if (currentNum === "2" && !numArr2.includes(".")) {
+    numArr2 += ".";
+    stringfy(numArr2);
   }
-);
+});
 
 // Operator button
 operator.forEach((x) =>
@@ -67,9 +66,9 @@ backspace.addEventListener("click", () => {
 
 // Function to display the calculation
 const stringfy = (numtype) => {
-  if(numtype === ''){
+  if (numtype === "") {
     userInputDisplay.textContent = 0;
-  }else{
+  } else {
     userInputDisplay.textContent = numtype;
   }
 };
@@ -102,7 +101,7 @@ const calculate = (operator) => {
   }
   symbol = null;
   // If number is infinity return 0
-  if (Number.isNaN(total)) {
+  if (Number.isNaN(total) || total === Infinity) {
     total = 0;
   }
   numArr1 = total.toString();
@@ -135,6 +134,6 @@ const clear = () => {
   numArr1 = "";
   numArr2 = "";
   symbol = null;
-  currentNum ="1"
+  currentNum = "1";
   userInputDisplay.textContent = 0;
 };
