@@ -40,12 +40,17 @@ button {
 }
 .row2,
 .row3,
-.row4,
-.row5 {
+.row4 {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   gap: 10px;
 }
+.row5 {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+}
+
 .buttons {
   position: relative;
 }
@@ -72,7 +77,9 @@ section {
   top: 60px;
   right: 0px;
   width: 100px;
-  height: 230px;
+  left: 330px;
+  height: 170px;
+  margin: 0;
   background-color: #55a630;
 }
 .clear {
