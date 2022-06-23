@@ -6,7 +6,7 @@ const clearEl = document.querySelector(".clear");
 const equal = document.querySelector(".equal");
 const decimal = document.querySelector(".decimal");
 const backspace = document.querySelector(".backspace");
-const negative = document.querySelector(".negative")
+const negative = document.querySelector(".negative");
 
 // Variables
 let currentNum = "1";
@@ -65,20 +65,28 @@ backspace.addEventListener("click", () => {
   removeNum();
 });
 
-negative.addEventListener("click",()=>{
-  negativeOperator()
-})
+negative.addEventListener("click", () => {
+  negativeOperator();
+});
 
-const negativeOperator = () =>{
+const negativeOperator = () => {
   console.log(numArr1.length);
-    if(currentNum === "1" && numArr1.length === 0){
-      numArr1 = "-"
-      stringfy(numArr1)
-    }if(currentNum === "2" && numArr2.length === 0){
-      numArr2 = "-"
-      stringfy(numArr2)
+  if (currentNum === "1") {
+    if (numArr1.length === 0) {
+      numArr1 = "-";
+    } else {
+      numArr1 = "-" + numArr1; // `-${numArr1}`
     }
-}
+    stringfy(numArr1);
+  } else if (currentNum === "2") {
+    if (numArr2.length === 0) {
+      numArr2 = "-";
+    } else {
+      numArr2 = "-" + numArr1; // `-${numArr1}`
+    }
+    stringfy(numArr2);
+  }
+};
 
 // Function to display the calculation
 const stringfy = (numtype) => {
@@ -153,5 +161,3 @@ const clear = () => {
   currentNum = "1";
   userInputDisplay.textContent = 0;
 };
-
-
