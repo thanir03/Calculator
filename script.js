@@ -6,6 +6,7 @@ const clearEl = document.querySelector(".clear");
 const equal = document.querySelector(".equal");
 const decimal = document.querySelector(".decimal");
 const backspace = document.querySelector(".backspace");
+const negative = document.querySelector(".negative")
 
 // Variables
 let currentNum = "1";
@@ -63,6 +64,21 @@ equal.addEventListener("click", () => {
 backspace.addEventListener("click", () => {
   removeNum();
 });
+
+negative.addEventListener("click",()=>{
+  negativeOperator()
+})
+
+const negativeOperator = () =>{
+  console.log(numArr1.length);
+    if(currentNum === "1" && numArr1.length === 0){
+      numArr1 = "-"
+      stringfy(numArr1)
+    }if(currentNum === "2" && numArr2.length === 0){
+      numArr2 = "-"
+      stringfy(numArr2)
+    }
+}
 
 // Function to display the calculation
 const stringfy = (numtype) => {
@@ -137,3 +153,5 @@ const clear = () => {
   currentNum = "1";
   userInputDisplay.textContent = 0;
 };
+
+
