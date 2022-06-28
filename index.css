@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .calculator-window {
@@ -55,17 +56,31 @@ button {
 section {
   margin: 10px 0;
 }
+.number:focus,.decimal:focus{
+  background-color: black;
+  color:white
+}
 
-#user-input {
+#currentNum{
   /* border: 2px solid red; */
   background-color: black;
   border-radius: 4px;
   color: white;
   text-align: end;
-  padding: 10px 20px;
+  padding: 0px 20px;
   max-width: 450px;
   overflow-x: auto;
 }
+#previousNum{
+  padding: 0px 19px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* To display the div element without content */
+#currentNum::before, #previousNum::before{
+  content: "\200B";
+}
+
 .operator {
   background-color: grey;
 }
@@ -91,6 +106,13 @@ i{
   font-size:20px;;
 }
 
+.equal:focus,
+.clear:focus {
+  color: black;
+}
+.operator:focus{
+  color:white;
+}
 @media only screen and (max-width: 425px) {
   body {
     background-image: linear-gradient(to right, #7ad7f0, #dbf3fa);
